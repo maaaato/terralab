@@ -17,5 +17,4 @@ dependencies:
          fi
 test:
   pre:
-    - |
-    terraform plan
+    - terraform plan
