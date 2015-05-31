@@ -16,5 +16,5 @@ dependencies:
            cd $HOME
          fi
 test:
-  pre:
-    - terraform plan
+  override:
+    - ./dummy_test_script.sh
