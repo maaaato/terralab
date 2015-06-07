@@ -17,4 +17,15 @@ dependencies:
          fi
 test:
   override:
-    - terraform plan
+    - echo "test override"
+
+deployment:
+  production:
+    branch: deployment/production
+    commands:
+      - terraform apply
+      
+  master:
+    branch: master
+    commands:
+      - ./create_pull_request.sh master deployment/production
